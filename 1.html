@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+
+  <head>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="2.js"></script>
+    <style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-b{
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 10px 30px 10px 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.dropdown-b:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 250px;
+  top: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  list-style-type: none;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+
+  </head>
+
+  <body ng-app="app" ng-controller="MainController as main">
+  <label class="dropdown">
+  <div class="dropdown-b">
+  Company
+  <div class="dropdown-content">
+  <ul my-menu="main.menu" style="list-style-type:none;">
+        </ul>
+  </div>
+</div>
+</label>
+
+
+
+
+  </body>
+
+</html>
